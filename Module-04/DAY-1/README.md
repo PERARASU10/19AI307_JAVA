@@ -1,41 +1,47 @@
-# Ex.No:4(A)  JAVA CONSTRUCTOR
+V# Ex.No:3(E)  STRINGBUILDER OBJECT REFERENCE IN JAVA
+
 ## AIM:
-To create a Java program using constructor to print the circumference of rectangle.[l=5,w=6]
+To write a Java program that creates a StringBuilder object and “sb” is pointing to that object i.e. the address of the StringBuilder object is stored in reference variable sb.
 
 ## ALGORITHM :
-1.  1.	Start the Program.
-2.	Define a class `circum`
-3.	Inside the class, define two integer variables `l` and `w` with values 5 and 6, respectively
-4.	Create a constructor `circum()`:
--	a) Calculate the `circumference` as `2 * (l + w)`
--	b) Print the `circumference` twice with different labels ("Area of First Rectangle" and "Area of Second Rectangle")
-5.	In `main`, create an object `sc` of the `circum` class
-6.	End
-
-
-
-
+1. Initialize a Scanner object to take user input.
+2. Read a line of text from the user and store it in variable str1.
+3. Create a StringBuilder object sb and initialize it with str1.
+4. Calculate the length of the string using sb.length().
+5. Display the string length.
+6. Calculate the capacity using the formula: sb.length() + 16.
+7. Display the calculated capacity.
+8. Close the Scanner.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Constructor using Java
-Developed by: 
-RegisterNumber:  
+Program to implement a StringBuilder Object Reference in Java
+Developed by: PERARASU M
+RegisterNumber: 212222100033
 */
 ```
 
 ## Sourcecode.java:
+```
+import java.util.Scanner;
 
+public class StringBuilderExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str1 = scanner.nextLine();
 
+        StringBuilder sb = new StringBuilder(str1);
 
-
-
-
+        System.out.println(sb.length());
+        System.out.println( (sb.length() + 16));
+    }
+}
+```
 
 ## OUTPUT:
 
-
+![image](https://github.com/user-attachments/assets/5b7a8739-b88f-465d-a187-a0c1f6e35103)
 
 ## RESULT:
-Thus the Java program using constructor to print the circumference of rectangle was executed successfully.
+Thus the  Java program successfully creates a StringBuilder object using the given string and stores the reference in the variable sb. The contents of the object are printed using the reference variable.
